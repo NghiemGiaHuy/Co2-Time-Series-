@@ -42,13 +42,15 @@ Khi chạy, chương trình in thông tin dữ liệu, các giá trị thiếu, 
 
 ## Kết quả tham khảo
 
-Trong kết quả được ghi chú trong `main.py`, Linear Regression có RMSE thấp nhất:
+Các kết quả được ghi chú trong `main.py`:
 
 | Mô hình | MAE | RMSE | R² |
 |---|---:|---:|---:|
 | Linear Regression | 0.360164 | 0.465279 | 0.990917 |
 | Random Forest | 5.628664 | 7.051154 | -1.086053 |
 | Decision Tree | 6.299342 | 7.711379 | -1.494991 |
+
+**Nhận xét:** Linear Regression vượt trội trên tập kiểm tra: MAE và RMSE thấp nhất, trong khi R² gần 1, cho thấy dự đoán khá sát với giá trị thực tế trên tập dữ liệu này. Random Forest và Decision Tree có sai số cao hơn nhiều và R² âm, tức là trong lần đánh giá này chúng dự đoán kém hơn một dự đoán cơ sở đơn giản bằng giá trị trung bình của tập kiểm tra. Vì vậy, Linear Regression được chọn để vẽ biểu đồ Actual vs Predicted. Kết quả này chỉ phản ánh cách chia dữ liệu và các đặc trưng hiện tại (5 giá trị trễ), không đảm bảo mô hình sẽ tổng quát tốt cho giai đoạn hoặc dữ liệu khác.
 
 Các số liệu trên là kết quả tham khảo được ghi chú trong mã nguồn; kết quả chạy lại có thể khác tùy phiên bản thư viện và dữ liệu.
 
